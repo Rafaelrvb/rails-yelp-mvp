@@ -7,7 +7,7 @@
 <h2>Reviews</h2>
 <p>list of reviews...</p>
 <% @reviews.each do |review| %>
-<li><%= review.content %> - <%= review.rating %></li>
+<li><%= review.content %> - <%= '👽'*review.rating %></li>
 <% end %>
 
 <%= link_to "List of All Restos", restaurants_path %>
