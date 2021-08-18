@@ -16,6 +16,14 @@ puts "DB cleaned"
     phone_number: Faker::PhoneNumber.cell_phone,
     category: Restaurant::RESTAURANT_CATEOGORIES.sample
   )
+  rand(3..15).times do
+    review = Review.new(
+      content: Faker::ChuckNorris.fact,
+      rating: rand(0..5)
+    )
+    review.restaurant_id = restaurant.id
+    review.save
+  end
   puts "Restaurant: #{restaurant.id} - #{restaurant.name} created"
 end
 
