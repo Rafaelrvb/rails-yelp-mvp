@@ -3,7 +3,9 @@
 <div class="container list-group d-flex justify-content-all-between">
 <li class="list-group-item">ID - Name - Address - Cateogory - Phone</li>
 <% @restaurants.each do |resto| %>
-<li class="list-group-item"><%= resto.id %> - <%= resto.name %> - <%= resto.address %> - <%= resto.category %> - <%= resto.phone_number %></li>
+<li class="list-group-item"><%= resto.id %> - <%= resto.name %> - <%= resto.address %>
+- <%= resto.category %> - <%= resto.phone_number %> -> <%= link_to 'Show me', restaurant_path(resto.id) %></li>
+
 <% end %>
 
 <%= link_to 'Add New Resto', new_restaurant_path %>
