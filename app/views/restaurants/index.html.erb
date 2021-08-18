@@ -1,8 +1,10 @@
-<h1>All Restaurants</h1>
+<h1 class="container">All Restaurants</h1>
 
 <div class="container list-group d-flex justify-content-all-between">
 <li class="list-group-item">ID - Name - Address - Cateogory</li>
 <% @restaurants.each do |resto| %>
 <li class="list-group-item"><%= resto.id %> - <%= resto.name %> - <%= resto.address %> - <%= resto.category %></li>
 <% end %>
+
+<%= link_to 'Add New Resto', new_restaurant_path %>
 </div>
