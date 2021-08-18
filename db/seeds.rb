@@ -19,4 +19,4 @@ puts "DB cleaned"
   puts "Restaurant: #{restaurant.id} - #{restaurant.name} created"
 end
 
-puts "done #{Restaurant.count} resto created"
+puts "done: #{Restaurant.count} resto created"

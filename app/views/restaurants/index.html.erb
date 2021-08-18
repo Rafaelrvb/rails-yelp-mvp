@@ -1,0 +1,8 @@
+<h1>All Restaurants</h1>
+
+<div class="container list-group d-flex justify-content-all-between">
+<li class="list-group-item">ID - Name - Address - Cateogory</li>
+<% @restaurants.each do |resto| %>
+<li class="list-group-item"><%= resto.id %> - <%= resto.name %> - <%= resto.address %> - <%= resto.category %></li>
+<% end %>
+</div>
